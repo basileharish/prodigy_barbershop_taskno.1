@@ -1,0 +1,178 @@
+
+<html lang="en">
+<head>
+  <title>Barber Shop Menu</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #534c4c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #131206;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    .service {
+        margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .service span {
+      color: #888;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Basile's Menu</h1>
+      </header>
+    <nav>
+        <a href="./Happy_house.html" target="_self">HOME</a>
+        <a href="./menu.html" target="_self">MENU</a>
+        <a href="./Table_book (1).html" target="_self">BOOK A TABLE</a>
+        <a href="./Customer.html" target="_self">CUSTOMER-FEEDBACK </a>
+    </nav>
+     <section>
+    <h2>Haircut Services</h2>
+    <ul>
+      <li class="service">
+        <div>
+          <strong>Classic Haircut</strong>
+          <p>A timeless haircut tailored to your style.</p>
+        </div>
+        <span>₹20</span>
+    </li>
+    <li class="service">
+        <div>
+          <strong>Trendy Fade</strong>
+          <p>Stay on trend with a stylish fade haircut.</p>
+        </div>
+        <span>₹25</span>
+    </li>
+    <li class="service">
+        <div>
+          <strong>Layered Cut</strong>
+          <p>Enhance your look with a layered haircut.</p>
+        </div>
+        <span>₹30</span>
+    </li>
+    <li class="service">
+        <div>
+          <strong>Buzz Cut</strong>
+          <p>A short and low-maintenance buzz cut.</p>
+        </div>
+        <span>₹15</span>
+    </li>
+    <li class="service">
+        <div>
+          <strong>Pompadour</strong>
+          <p>Get a classic pompadour hairstyle.</p>
+        </div>
+        <span>₹35</span>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Facial Services</h2>
+    <ul>
+      <li class="service">
+        <div>
+          <strong>Classic Facial</strong>
+          <p>A traditional facial to cleanse, exfoliate, and nourish the skin.</p>
+        </div>
+        <span>₹50</span>
+      </li>
+      <li class="service">
+        <div>
+          <strong>Hydrating Facial</strong>
+          <p>Deep hydration for dry skin, leaving it soft and replenished.</p>
+        </div>
+        <span>₹60</span>
+      </li>
+      <li class="service">
+        <div>
+          <strong>Anti-Aging Facial</strong>
+          <p>Targets fine lines and wrinkles to promote a more youthful appearance.</p>
+        </div>
+        <span>₹75</span>
+      </li>
+      <li class="service">
+        <div>
+          <strong>Acne Control Facial</strong>
+          <p>Cleanses and treats acne-prone skin for a clearer complexion.</p>
+        </div>
+        <span>₹55</span>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Massage Services</h2>
+    <ul>
+      <li class="service">
+        <div>
+          <strong>Swedish Massage</strong>
+          <p>A gentle full-body massage to relax the entire body.</p>
+        </div>
+        <span>₹60</span>
+      </li>
+      <li class="service">
+        <div>
+          <strong>Deep Tissue Massage</strong>
+          <p>Focused pressure to release tension in deeper muscle layers.</p>
+        </div>
+        <span>₹70</span>
+      </li>
+      <li class="service">
+        <div>
+          <strong>Hot Stone Massage</strong>
+          <p>Heated stones melt away tension for a deeply soothing experience.</p>
+        </div>
+        <span>₹80</span>
+      </li>
+      <li class="service">
+        <div>
+          <strong>Aromatherapy Massage</strong>
+          <p>Essential oils enhance relaxation and balance the mind.</p>
+        </div>
+        <span>₹65</span>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>
+
+
+

@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+  <title>Barber Shop Booking</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    section {
+        max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #333;
+    }
+    form {
+      display: grid;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input,select {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    #totalPrice {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    #bookedSlots {
+      margin-top: 20px;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Basile's Booking</h1>
+  </header>
+<nav>
+    <a href="./Happy_house.html" target="_self">HOME</a>
+    <a href="./menu.html" target="_self">MENU</a>
+    <a href="./Table_book (1).html" target="_self">BOOK A TABLE</a>
+    <a href="./Customer.html" target="_self">CUSTOMER-FEEDBACK </a>
+  </nav>
+  <section>
+    <h2>Book a Slot</h2>
+    <form id="bookingForm">
+      <label for="name">Name:</label>
+      <input type="text" id="text" name="name" required>
+      <label for="Contacts">Contacts:</label>
+      <input type="tel" id="contacts" name="Contacts" min="0-9">
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" name="date" required>
+      <label for="time">Select Time:</label>
+      <input type="time" id="time" name="time" required>
+      <label for="haircut">Haircut:</label>
+      <select id="haircut" name="haircut" onchange="updateTotal()">
+        <option value="0">Select a Haircut</option>
+        <option value="20">Classic Haircut - ₹20</option>
+        <option value="25">Trendy Fade - ₹25</option>
+        <option value="30">Layered Cut - ₹30</option>
+        <option value="15">Layered Cut - ₹15</option>
+        <option value="35">Layered Cut - ₹35</option>
+      </select>
+      <label for="facial">Facial:</label>
+      <select id="facial" name="facial" onchange="updateTotal()">
+        <option value="0">Select a Facial</option>
+        <option value="40">Classic Facial - ₹40</option>
+        <option value="50">Hydrating Facial - ₹50</option>
+        <option value="75">Anti-Aging Facial - ₹75</option>
+        <option value="60">Acne Control Facial - ₹55</option>
+      </select>
+      <label for="massage">Massage:</label>
+      <select id="massage" name="massage" onchange="updateTotal()">
+        <option value="0">Select a Massage</option>
+        <option value="60">Swedish Massage - ₹60</option>
+        <option value="70">Deep Tissue Massage - ₹70</option>
+        <option value="80">Hot Stone Massage - ₹80</option>
+        <option value="65">Aromatherapy Massage - ₹80</option>
+      </select>
+      <button type="button" onclick="bookSlot()">Book Now</button>
+      <p id="totalPrice">Total: ₹0.00</p>
+    </form>
+    <div id="bookedSlots">
+      <h2>Booked Slots</h2>
+      <ul id="slotsList"></ul>
+    </div>
+  </section>
+  <script>
+    const bookedSlots = [];
+    function updateTotal() {
+      const haircutPrice = parseFloat(document.getElementById('haircut').value);
+      const facialPrice = parseFloat(document.getElementById('facial').value);
+      const massagePrice = parseFloat(document.getElementById('massage').value);
+      const totalPrice = haircutPrice + facialPrice + massagePrice;
+      document.getElementById('totalPrice').innerText = `Total: ₹${totalPrice.toFixed(2)}`;
+    }
+    function bookSlot() {
+      const selectedHaircut = document.getElementById('haircut').value;
+      const selectedFacial = document.getElementById('facial').value;
+      const selectedMassage = document.getElementById('massage').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const totalPrice = parseFloat(selectedHaircut) + parseFloat(selectedFacial) + parseFloat(selectedMassage);
+      const bookingDetails = {
+        haircut: selectedHaircut,
+        facial: selectedFacial,
+        massage: selectedMassage,
+        date: date,
+        time: time,
+        total: totalPrice.toFixed(2),
+      };
+      bookedSlots.push(bookingDetails);
+      updateBookedSlotsList();
+      alert(`Booking Confirmed!\nHaircut: ₹${selectedHaircut}\nFacial: ₹${selectedFacial}\nMassage: ₹${selectedMassage}\nDate: ${date}\nTime: ${time}`);
+    }
+    function updateBookedSlotsList() {
+      const slotsList = document.getElementById('slotsList');
+      slotsList.innerHTML = '';
+      bookedSlots.forEach((slot) => {
+        const listItem = document.createElement('li');
+        listItem.innerText = `Date: ${slot.date}, Time: ${slot.time}, Total: ₹${slot.total},Name: ${slot.name}`;
+        slotsList.appendChild(listItem);
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basile the Barber</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #1afd06;
+    }
+    p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Basile the Barber</h1>
+  </header>
+  <nav>
+    <a href="./Happy_house.html" target="_self">HOME</a>
+    <a href="./menu.html" target="_self">MENU</a>
+    <a href="./Table_book (1).html" target="_self">BOOK A TABLE</a>
+    <a href="./Customer.html" target="_self">CUSTOMER-FEEDBACK </a>
+  </nav>
+  <section>
+    <h2>Welcome to Basile's Barber Shop</h2>
+    <p>Providing top-notch haircut and grooming services for men.</p>
+    <p>Here at Basile the barber, elegance and accuracy collide! Here at Basile the barber, we're proud to provide more than simply a haircut; we provide an experience that embodies skill, attention to detail, and a dash of vintage charm. Enter our energetic, friendly environment, where a feeling of community and the art of grooming collide.</p>
+    <p>🔍 About Us: We are more than simply barbers at Basile the barber; we are expert artisans committed to making you feel and look your best. Our team is dedicated to offering individualized treatments that complement your distinct style, driven by a passion for the age-old craft of barbering with a contemporary twist.</p>
+    <p>✂️ Services: Our talented barbers can make your ideal appearance a reality, whether you're looking for a hot towel shave, a new beard trim, or a classic haircut. We offer a variety of services that are specifically tailored to your unique style to keep you looking put together.</p>
+  <p>👌 Our Approach: Our dedication to accuracy and quality is what makes us unique. Every haircut, in our opinion, is a piece of art, and our barbers give each one the expertise and attention it requires. Our main goal is your satisfaction, therefore we work hard to provide a space where you can unwind, relax, and feel confident when you leave.</p>
+<p>🛋️ The Experience: Settle into our cozy seats, take advantage of a free drink, and watch our talented barbers work their magic. Our chic yet comfortable environment is meant to make you feel at home as we change the way you look. We accommodate a wide range of tastes and styles, whether you're an established gentlemen or a cutting-edge trendsetter.</p>
+ <p>💈 Community Matters: Basile the barber serves as a hub for the community where people congregate to interact, exchange tales, and value the art of grooming. It's more than simply a place to get haircuts. Come enjoy an experience with us that goes beyond a simple salon chair.</p>
+<p>Contact us: 9566642550,9837592943</p>
+<p>Follow us on:</p>
+<p>Instagram -> @Basile_the_barber</p>
+<p>Facebook -> @Basile_the_barber</p>
+</body>
+</html>

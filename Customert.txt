@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Basile the Barber</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #f2e5e5;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration:none;
+      padding: 10px;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    h3 {
+      color: #555;
+      margin-top: 20px;
+    }
+    form {
+      display: grid;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input,textarea {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Basile the Barber</h1>
+      </header>
+  <nav>
+    <a href="./Happy_house.html" target="_self">HOME</a>
+    <a href="./menu.html" target="_self">MENU</a>
+    <a href="./Table_book (1).html" target="_self">BOOK A TABLE</a>
+    <a href="./Customer.html" target="_self">CUSTOMER-FEEDBACK </a>
+  </nav>
+   <section>
+    <h2>Customer Feedback and Reviews</h2>
+    <div id="feedbackContainer"></div>
+    <h3>Leave Your Feedback:</h3>
+    <form id="feedbackForm">
+      <label for="userName">Your Name:</label>
+      <input type="text" id="userName" name="userName" required>
+      <label for="userFeedback">Your Feedback:</label>
+      <textarea id="userFeedback" name="userFeedback" rows="4" required></textarea>
+      <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+    </form>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      displayFeedback();
+    });
+    function displayFeedback() {
+      const feedbackContainer = document.getElementById('feedbackContainer');
+      const feedbackData = getFeedbackData();
+      if (feedbackData.length === 0) {
+        feedbackContainer.innerHTML = '<p>No feedback available.</p>';
+        return;
+      }
+      feedbackData.forEach((feedback) => {
+        const feedbackItem = document.createElement('div');
+        feedbackItem.classList.add('feedback-item');
+        const userName = document.createElement('h4');
+        userName.innerText = feedback.userName;
+        const userFeedback = document.createElement('p');
+        userFeedback.innerText = feedback.userFeedback;
+        feedbackItem.appendChild(userName);
+        feedbackItem.appendChild(userFeedback);
+        feedbackContainer.appendChild(feedbackItem);
+      });
+    }
+    function getFeedbackData() {
+      return [
+        { userName: 'John Doe', userFeedback: 'Great service! Will definitely come back.' },
+        { userName: 'Jane Smith', userFeedback: 'Basile is an amazing barber. Highly recommended!' },
+        { userName: 'Alice Johnson', userFeedback: 'Friendly staff and excellent haircuts.' },
+      ];
+    }
+    function submitFeedback() {
+      const userName = document.getElementById('userName').value;
+      const userFeedback = document.getElementById('userFeedback').value;
+      if (userName.trim() === '' || userFeedback.trim() === '') {
+        alert('Please fill in both fields before submitting feedback.');
+        return;
+      }
+      const feedbackContainer = document.getElementById('feedbackContainer');
+      const feedbackItem = document.createElement('div');
+      feedbackItem.classList.add('feedback-item');
+      const userNameElement = document.createElement('h4');
+      userNameElement.innerText = userName;
+      const userFeedbackElement = document.createElement('p');
+      userFeedbackElement.innerText = userFeedback;
+      feedbackItem.appendChild(userNameElement);
+      feedbackItem.appendChild(userFeedbackElement);
+      feedbackContainer.appendChild(feedbackItem);
+      document.getElementById('userName').value = '';
+      document.getElementById('userFeedback').value = '';
+    }
+  </script>
+</body>
+</html>
